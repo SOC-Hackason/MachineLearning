@@ -14,8 +14,8 @@ def preprocess_email(email_text):
     email_text = email_text.lower()
 
     # 去除常见称呼和结束语
-    email_text = re.sub(r'(prof.|sommelier|dear|regards|best regards|sincerely|hello|hi|thank you|thanks|yours|truly|faithfully|cheers|kind regards)[\s,]*', '', email_text)
-
+    email_text = re.sub(r'\b(dear|regards|best regards|sincerely|hello|hi|thank you|thanks|yours|truly|faithfully|cheers|kind regards|mailsommelier)\b[\s,]*', '', email_text)
+    
     # 分词与词性标注
     doc = nlp(email_text)
     # 词形还原并去除停用词
@@ -38,10 +38,16 @@ def extract_custom_keywords(email_text):
     for phrase in phrases:
         if phrase in email_text.lower():
             keywords.append(phrase)
+    
+    # 排除不必要的短语
+    exclude_phrases = ['these days', 'these two weeks']
+    for phrase in exclude_phrases:
+        email_text = email_text.replace(phrase, '')
 
-    # 统计高频词
+    # 统计高频词，排除不需要的词
+    exclude_words = ['these', 'you', 'are', 'this', 'that', 'know', 'write', 'ask', 'see', 'let', 'm', 'week']
     word_freq = Counter(email_text.split())
-    high_freq_words = [word for word, freq in word_freq.items() if freq > 1 and word not in phrases]
+    high_freq_words = [word for word, freq in word_freq.items() if freq > 1 and word not in phrases and len(word) > 2 and word not in exclude_words]
 
     keywords.extend(high_freq_words)
     
