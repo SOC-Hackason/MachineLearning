@@ -14,7 +14,7 @@ def preprocess_email(email_text):
     email_text = email_text.lower()
 
     # 去除常见称呼和结束语
-    email_text = re.sub(r'(dear|regards|best regards|sincerely|hello|hi|thank you|thanks|yours|truly|faithfully|cheers|kind regards)[\s,]*', '', email_text)
+    email_text = re.sub(r'(sommelier|dear|regards|best regards|sincerely|hello|hi|thank you|thanks|yours|truly|faithfully|cheers|kind regards)[\s,]*', '', email_text)
 
     # 分词与词性标注
     doc = nlp(email_text)
