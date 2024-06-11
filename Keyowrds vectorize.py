@@ -136,8 +136,8 @@ category = classify_email(model, vectorizer, new_email_text)
 print("邮件分类结果：", category)
 
 # 发送推送通知
-user_id = 'Udc766b4c9cf76ae32b918489c05ba04f'  # 从提供的JSON数据中获取
-access_token = '+upv04InwMYYzFrlS58h1dJcoHdX7C8V7+fsboZ/NVSwzVFDNkPb1SSH5m7bMkvgQyZzoaF5Wx8oMrgHbbhJtweAaKseioakTgOjYCN0k/+0Xv0cjZWIrTRlzsJdJ8xMLqEKko1HVwokOlmLNTVGuQdB04t89/1O/w1cDnyilFU='  # 您的频道访问令牌
+user_id = ''  # 从提供的JSON数据中获取
+access_token = ''  # 您的频道访问令牌
 message = f'You have a new {category} email: {new_email_text}'
 status_code = send_line_notification(message, user_id, access_token)
 print("推送状态码：", status_code)
