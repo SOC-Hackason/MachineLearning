@@ -46,5 +46,4 @@ for cluster in range(num_clusters):
     print(f"\nCluster {cluster}:")
     print(df[df['cluster'] == cluster]['combined_text'].head(10))
 
-    
-print(vectorizer.get_feature_names())
+
