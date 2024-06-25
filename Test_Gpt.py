@@ -1,4 +1,4 @@
-import Gpt_test
+import Gpt_summarise
 
 mail = """
 株式会社●●●●
@@ -46,4 +46,4 @@ https://businessmail.or.jp/about/access
 """
 
 api_key = "sk-proj-eBwCmFJCxyTto80BZgfiT3BlbkFJsfe1ODtGFKgMkRVTh9d8"
-print(Gpt_test.summarise_email(email_content=mail,api_key=api_key))
+print(Gpt_summarise.summarise_email(email_content=mail,api_key=api_key))
