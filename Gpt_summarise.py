@@ -9,7 +9,7 @@ def summarise_email(email_content, api_key):
     }
     
     system_message = "You are a secretary.You are good at summarizing email.You can summarise your email in no more than three sentences."
-    prompt = f"Summarize the following email in Japanese:\n\n{email_content}"
+    prompt = f"Summarize the following email in Japanese as shortly as possible:\n\n{email_content}"
 
     data = {
         "model": "gpt-4o",
