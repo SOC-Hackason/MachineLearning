@@ -2,38 +2,50 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
+from sklearn.pipeline import FeatureUnion
+from sklearn.preprocessing import FunctionTransformer
+from sklearn.compose import ColumnTransformer
 from sklearn.metrics import accuracy_score, classification_report
 
-
 #dataset pattern
-
 #"email_text","label"
 #"Meeting on Thursday","Work"
 #label: Work, School, Appointment, Promotions, Spam
+#importance:0,1,2
 
 # Load dataset
-#df = pd.read_csv(/path/'emails.csv')
+#df = pd.read_csv('emails.csv')
 
 # Split the data into features and labels
-X = df['email_text']
+X = df[['email_text', 'importance']]
 y = df['label']
 
 # Split the dataset into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Vectorize the text data
-vectorizer = TfidfVectorizer(stop_words='english')
-X_train_tfidf = vectorizer.fit_transform(X_train)
-X_test_tfidf = vectorizer.transform(X_test)
+# Define a transformer for the text data
+text_transformer = TfidfVectorizer(stop_words='english')
+
+# Define a pipeline that processes text and numerical features separately
+preprocessor = ColumnTransformer(
+    transformers=[
+        ('text', text_transformer, 'email_text'),
+        ('importance', 'passthrough', 'importance')
+    ]
+)
+
+# Preprocess the data
+X_train_transformed = preprocessor.fit_transform(X_train)
+X_test_transformed = preprocessor.transform(X_test)
 
 # Initialize the model
 model = LogisticRegression()
 
 # Train the model
-model.fit(X_train_tfidf, y_train)
+model.fit(X_train_transformed, y_train)
 
 # Predict on the test set
-y_pred = model.predict(X_test_tfidf)
+y_pred = model.predict(X_test_transformed)
 
 # Evaluate the model
 print('Accuracy:', accuracy_score(y_test, y_pred))
