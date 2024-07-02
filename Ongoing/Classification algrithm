@@ -8,7 +8,7 @@ from sklearn.compose import ColumnTransformer
 from sklearn.metrics import accuracy_score, classification_report
 
 #dataset pattern
-#"email_text","label"
+#"email_text","label","importance"
 #"Meeting on Thursday","Work"
 #label: Work, School, Appointment, Promotions, Spam
 #importance:0,1,2
