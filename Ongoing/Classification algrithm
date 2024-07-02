@@ -2,10 +2,9 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
-from sklearn.pipeline import FeatureUnion
-from sklearn.preprocessing import FunctionTransformer
 from sklearn.compose import ColumnTransformer
 from sklearn.metrics import accuracy_score, classification_report
+from sklearn.preprocessing import FunctionTransformer
 
 #dataset pattern
 #"email_text","label","importance"
@@ -14,7 +13,7 @@ from sklearn.metrics import accuracy_score, classification_report
 #importance:0,1,2
 
 # Load dataset
-#df = pd.read_csv('emails.csv')
+df = pd.read_csv('/Users/kiwi/Desktop/emails.csv') 
 
 # Split the data into features and labels
 X = df[['email_text', 'importance']]
@@ -26,11 +25,14 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_
 # Define a transformer for the text data
 text_transformer = TfidfVectorizer(stop_words='english')
 
+# Define a transformer for the importance feature to ensure it is 2D
+importance_transformer = FunctionTransformer(lambda x: x.values.reshape(-1, 1))
+
 # Define a pipeline that processes text and numerical features separately
 preprocessor = ColumnTransformer(
     transformers=[
         ('text', text_transformer, 'email_text'),
-        ('importance', 'passthrough', 'importance')
+        ('importance', importance_transformer, 'importance')
     ]
 )
 
