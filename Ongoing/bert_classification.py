@@ -1,17 +1,12 @@
 import pandas as pd
 import torch
 import numpy as np
+import pickle
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score, classification_report
 from sklearn.preprocessing import StandardScaler
 from transformers import BertTokenizer, BertModel
-
-#dataset pattern
-#"email_text","label","importance"
-#"Meeting on Thursday","Work"
-#label: Work, School, Appointment, Promotions, Spam
-#importance:0,1,2
 
 # Load dataset
 df = pd.read_csv('maildata.csv') 
@@ -24,7 +19,6 @@ y = df['label']
 # BERTモデルの準備
 tokenizer = BertTokenizer.from_pretrained('bert-base-multilingual-cased')
 model = BertModel.from_pretrained('bert-base-multilingual-cased')
-
 
 def get_bert_features(text, max_length=128):
     encoded = tokenizer.encode_plus(
@@ -60,4 +54,12 @@ y_pred = model.predict(X_test_scaled)
 y_pred_proba = model.predict_proba(X_test_scaled)
 print('Accuracy:', accuracy_score(y_test, y_pred))
 print('Classification Report:\n', classification_report(y_test, y_pred,zero_division=1))
+#appontmment,promotion,school,work
 print('Predicted Probabilities:\n', y_pred_proba)
+print(y_pred)
+
+with open('model.pickle', mode='wb') as f:
+    pickle.dump(model,f,protocol=2)
+
+with open('scaler.pickle', mode='wb') as f:
+    pickle.dump(scaler,f)

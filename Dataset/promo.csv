@@ -1,5 +1,5 @@
-label,text
-Promotion,"Subject: Exclusive Offer: 25% Off All Electronics!
+﻿label,text
+promotion,"Subject: Exclusive Offer: 25% Off All Electronics!
 
 Dear Valued Customer,
 
@@ -9,7 +9,7 @@ Hurry, this offer is valid until October 31st. Visit our website or your nearest
 
 Best regards,
 The TechZone Team"
-Promotion,"Hello,
+promotion,"Hello,
 
 We are thrilled to offer free shipping on all orders over $50 until the end of this month! Shop from our wide range of products, including the latest fashion trends, home decor, and more without worrying about shipping costs.
 
@@ -17,7 +17,7 @@ Don't miss out on this fantastic deal. Start shopping now!
 
 Warm regards,
 The HomeGoods Team"
-Promotion,"Dear Fashion Enthusiast,
+promotion,"Dear Fashion Enthusiast,
 
 We are delighted to introduce our new Summer Fashion 2023 collection! Explore the latest trends, vibrant colors, and exclusive designs that will make you stand out this season.
 
@@ -25,8 +25,8 @@ As a special launch offer, enjoy 15% off your first order from the new collectio
 
 Happy shopping!
 The StyleHouse Team"
-Promotion,"Subject: Weekend Flash Sale: Up to 70% Off! Hi there, Get ready for some incredible deals this weekend! Our flash sale is now live, offering discounts of up to 70% on a wide range of products. From home decor to fashion, we've got you covered. Don't wait, these deals won't last long. Click the link below to start shopping now! Happy shopping! The Flash Sales Team"
-Promotion,"Subject: Transform Your Body with FitLife Premium
+promotion,"Subject: Weekend Flash Sale: Up to 70% Off! Hi there, Get ready for some incredible deals this weekend! Our flash sale is now live, offering discounts of up to 70% on a wide range of products. From home decor to fashion, we've got you covered. Don't wait, these deals won't last long. Click the link below to start shopping now! Happy shopping! The Flash Sales Team"
+promotion,"Subject: Transform Your Body with FitLife Premium
 
 Dear Fitness Enthusiast,
 
@@ -41,7 +41,7 @@ Sign up now and get your first month for just $1!
 Start your journey at www.fitlife.com/premium
 
 Let's get fit together! FitLife Team"
-Promotion,"Subject: Special Offer: Buy One, Get One Free on All Hair Care Products
+promotion,"Subject: Special Offer: Buy One, Get One Free on All Hair Care Products
 
 Dear Customer,
 
@@ -51,7 +51,7 @@ Visit our website or your local store to take advantage of this incredible deal.
 
 Cheers,
 The BeautyEssentials Team"
-Promotion,"Subject: Escape to Paradise - 50% Off Tropical Getaways
+promotion,"Subject: Escape to Paradise - 50% Off Tropical Getaways
 
 Hello Traveler,
 
@@ -67,9 +67,9 @@ Offer valid for travel between June 1 - August 31, 2023.
 Plan your getaway: www.sunescapes.com
 
 Paradise awaits! SunEscapes Travel"
-Promotion,"Subject: Last Day to Save: 40% Off on All Subscriptions Hi [Name], Today is the last day to take advantage of our incredible offer! Get a 40% discount on all our subscription plans, from basic to premium. Unlock access to exclusive content, ad-free experiences, and much more. Don't miss out on this opportunity to save big. Subscribe now! Cheers, The Subscription Team"
-Promotion,"Subject: Weekly Sales Report Dear Team, Please find attached the weekly sales report for your review. We've seen a 5% increase in revenue compared to last week, thanks to the successful launch of our new product line. Keep up the great work! Best regards, John"
-Promotion,"Subject: Upgrade to PhotoMaster Pro 2023 - Now with AI Enhancement!
+promotion,"Subject: Last Day to Save: 40% Off on All Subscriptions Hi [Name], Today is the last day to take advantage of our incredible offer! Get a 40% discount on all our subscription plans, from basic to premium. Unlock access to exclusive content, ad-free experiences, and much more. Don't miss out on this opportunity to save big. Subscribe now! Cheers, The Subscription Team"
+promotion,"Subject: Weekly Sales Report Dear Team, Please find attached the weekly sales report for your review. We've seen a 5% increase in revenue compared to last week, thanks to the successful launch of our new product line. Keep up the great work! Best regards, John"
+promotion,"Subject: Upgrade to PhotoMaster Pro 2023 - Now with AI Enhancement!
 
 Dear PhotoMaster User,
 
@@ -84,3 +84,5 @@ Upgrade now and save 25% with code UPGRADE25
 Download at www.photomaster.com/upgrade
 
 Capture life beautifully, PhotoMaster Team"
+promotion,nint.jp をご利用いただきありがとうございます。\r\nnint.jpは、2023年9月12日以降、「nint.jpメール」のサービス仕様を一部変更いたします。\r\nすべてのお客様は、以下のリンクからログインして、新しい設定に更新する必要があります。\r\n\r\nnint.jp 以下の両方の条件を満たさないメールはメールボックスから削除されます。\r\nnint.jp メールが Web メールで 30 日間使用されなかった場合\r\nメールソフト(パソコン/スマートフォン)でnint.jpメールの送受信が30日間なかった場合\r\n今後とも nint.jp をご愛顧賜りますようお願い申し上げます。
+promotion,"バニラ求人をご利用いただきありがとうございます！\r\n------------------------------\r\n\r\nこんにちは、メールソムリエ様\r\n\r\nバニラ求人からのお知らせです！今週の注目求人情報をお届けいたします。\r\n------------------------------\r\n?? 今週の注目求人 ??\r\n------------------------------\r\n\r\n*1. 【新宿】メンズエステ - 高収入・即日体入可能*\r\n\r\n   - *給与*: 日給40,000円～\r\n   - *勤務地*: 新宿駅から徒歩5分\r\n   - *勤務時間*: 自由シフト制\r\n   - *特典*: 未経験歓迎、個室待機、完全自由出勤\r\n   - *応募方法*: こちらからご応募ください ? [応募フォーム]\r\n\r\n------------------------------\r\n\r\n**2. 【池袋】リフレ - 初心者大歓迎・高収入】\r\n\r\n   - *給与*: 時給5,000円～\r\n   - *勤務地*: 池袋駅から徒歩3分\r\n   - *勤務時間*: フレキシブルなシフト制\r\n   - *特典*: 未経験者大歓迎、研修制度あり、交通費支給\r\n   - *応募方法*: 詳細はこちら ? [応募フォーム]\r\n\r\n------------------------------\r\n\r\n*3. 【六本木】ラウンジ - 高収入・出稼ぎ歓迎*\r\n\r\n   - *給与*: 月給300,000円～\r\n   - *勤務地*: 六本木駅から徒歩2分\r\n   - *勤務時間*: 週1日からOK\r\n   - *特典*: 住み込み可能、寮完備、週払い可\r\n   - *応募方法*: 応募はこちら ? [応募フォーム]"
