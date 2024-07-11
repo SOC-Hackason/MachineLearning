@@ -1,5 +1,5 @@
 import mail_classification 
-
+from classdefine import *
 # 新しいメッセージ
 new_message = """
 留学生チューター担当者 各位
@@ -22,6 +22,18 @@ new_message = """
 model,scaler = mail_classification.load_model("model.pickle","scaler.pickle")
 
 #カテゴリごとの確率分布を取得
+TOPIC =  ["Appointment", "Promotion", "School", "Work"]
 predicted_proba = mail_classification.classify_mail(new_message,model,scaler) 
 
-print('Predicted Probabilities:', predicted_proba)
+import pickle
+
+# load the model 
+model = pickle.load(open('./Ongoing/topic_classifier.pkl', 'rb'))
+prob = model.predict(new_message)
+# [ ham, spam]
+spam_prob = prob[0][1]
+
+importance_by_topic =  predicted_proba * spam_prob
+
+for k, v in zip(TOPIC, importance_by_topic):
+    print(f'importance of {k}: {v}')
